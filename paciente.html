@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paciente - MedicarePlus</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\logotipo-hoja-combinada-cruz-medica-verde-vectorial-programas-salud-farmacia-natural-base-hierbas_460700-23.avif" alt="Logotipo MedicarePlus" width="50" height="50">
+                <div class="brand-text">
+                    <h1 class="brand-name">MedicarePlus</h1>
+                    <p class="brand-slogan">Tu salud, nuestra prioridad</p>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#especialidades">Especialidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#promociones">Promociones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sesion">Inicio de Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section id="inicio">
+        <div class="container">
+            <h2 class="section-title">Lo Más Destacado</h2>
+            <div id="sliderPromociones" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\famracia03.png" class="d-block w-100" alt="Promoción 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\promos-mujer-12-1024x1024.jpg" class="d-block w-100" alt="Promoción 2" height="730px">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#sliderPromociones" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#sliderPromociones" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+
+            <div class="row mt-4">
+                <h3 class="section-subtitle">Especialidades Médicas</h3>
+                <div class="col-md-4">
+                    <div class="card specialty-card" onclick="showCalendar('medicina-interna')">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\images.jpg" alt="Medicina Interna" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Medicina Interna</h5>
+                            <p>Consultorio: 101 | Teléfono: 123-456-7890</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card specialty-card" onclick="showCalendar('cardiologia')">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\921b8ad8fd8d52869f8f6575ceacd660.jpg" alt="Cardiología" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Pediatría</h5>
+                            <p>Consultorio: 102 | Teléfono: 123-456-7891</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card specialty-card" onclick="showCalendar('ginecologia')">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\marca-clinica-cardiologia.jpg" alt="Ginecología" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Cardiología</h5>
+                            <p>Consultorio: 103 | Teléfono: 123-456-7892</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card specialty-card" onclick="showCalendar('geriatria')">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\depositphotos_280225072-stock-illustration-pregnant-women-vector-icon.jpg" alt="Pediatría" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Ginecología</h5>
+                            <p>Consultorio: 104 | Teléfono: 123-456-7893</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card specialty-card" onclick="showCalendar('pediatria')">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\allergology-color-line-icon-pictogram-600nw-2101395925.webp" alt="Alergología" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Alergología</h5>
+                            <p>Consultorio: 105 | Teléfono: 123-456-7894</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card specialty-card" onclick="showCalendar('neurologia')">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\brain-logo-template-design-brainstorm-logo-ideas-neurology-logo-think-idea-concept-free-vector.jpg" alt="Neurología" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Neurología</h5>
+                            <p>Consultorio: 106 | Teléfono: 123-456-7895</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Nosotros</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="about-card">
+                        <h3>Misión</h3>
+                        <p>Ofrecer atención médica con calidad y empatía.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="about-card">
+                        <h3>Visión</h3>
+                        <p>Ser un centro líder en atención médica especializada.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="about-card">
+                        <h3>Valores</h3>
+                        <ul>
+                            <li>Excelencia</li>
+                            <li>Ética</li>
+                            <li>Compromiso</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle">Nuestro Equipo</h3>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="team-member">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\pngtree-young-afro-professional-doctor-png-image_10148632.png" alt="Dr. Juan Pérez">
+                        <h5>Dr. Juan Pérez</h5>
+                        <p>Médico Internista con más de 10 años de experiencia.</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="team-member">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\ai-generated-female-doctor-isolated-on-transparent-background-free-png.webp" alt="Dr. Ana López">
+                        <h5>Dr. Ana López</h5>
+                        <p>Cardióloga, especializada en enfermedades cardiovasculares.</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="team-member">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\professor-doctor-acting-pointing-fingers-look-like-professional-medical-healthcare-in-transparent-background-png.webp" alt="Dra. María Gómez">
+                        <h5>Dra. María Gómez</h5>
+                        <p>Ginecóloga, experta en salud femenina.</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="team-member">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\ai-generated-a-smiling-doctor-with-glasses-and-a-white-lab-coat-isolated-on-transparent-background-free-png.webp" alt="Dr. Luis Martínez">
+                        <h5>Dr. Luis Martínez</h5>
+                        <p>Neurologo, especializado en cuidado de personas mayores.</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="team-member">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Dr. Javier Martínez">
+                        <h5>Dr. Javier Martínez</h5>
+                        <p>Alergologo, especializado en cuidado de todas las edades.</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="team-member">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\ai-generated-a-female-doctor-with-a-stethoscope-isolated-on-transparent-background-free-png.webp" alt="Dr. Carolina Pérez">
+                        <h5>Dr. Carolina Pérez</h5>
+                        <p>Pediatra con experiencia en el cuidado de niños.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Especialidades -->
+    <section id="especialidades">
+        <div class="container">
+            <h2 class="section-title">Especialidades</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\medica_sur-1024x698.webp" alt="Instalaciones" class="img-fluid">
+                        <p>Instalaciones del Centro Médico</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\equipo-medicos-juntos-instalaciones-hospital_762785-39151.jpg" alt="Médicos" class="img-fluid">
+                        <p>Médicos especialistas en acción</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\standard_ANTENCIONES - DIGERD.JPG.jpeg" alt="Enfermedades Tratadas" class="img-fluid">
+                        <p>Enfermedades tratadas con eficacia</p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="section-subtitle">Calendario de Citas</h3>
+            <div id="calendario">
+                <p>Selecciona un médico y fecha para agendar tu cita.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Promociones -->
+    <section id="promociones">
+        <div class="container">
+            <h2 class="section-title">Promociones</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\famracia03.png" alt="Promoción 1" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\promos-mujer-12-1024x1024.jpg" alt="Promoción 2" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Sección Contacto -->
+<section id="contacto">
+    <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Datos de contacto</h4>
+                <p>Nombre: MedicarePlus</p>
+                <p>Avenida Insurgentes Sur 1234, Colonia del Valle, Alcaldía Benito Juárez, Ciudad de México, C.P. 03100, México.</p>
+                <p>Teléfonos: 123-456-7890</p>
+                <p>Horarios: Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+                <!-- Mapa de Google -->
+                <div id="map"></div>
+            </div>
+            <div class="col-md-6">
+                <h4>Formulario de contacto</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Inicio de Sesión / Registro -->
+<section id="sesion">
+    <div class="container">
+        <h2 class="section-title">Inicio de Sesión / Registro</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Inicio de Sesión</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="correo-sesion" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo-sesion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contraseña-sesion" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contraseña-sesion">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Registro</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre-registro" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre-registro">
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido-paterno" class="form-label">Primer Apellido</label>
+                        <input type="text" class="form-control" id="apellido-paterno">
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido-materno" class="form-label">Segundo Apellido</label>
+                        <input type="text" class="form-control" id="apellido-materno">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo-registro" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo-registro">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contraseña-registro" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contraseña-registro">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono-registro" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono-registro">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Submenú después de Iniciar sesión -->
+<section id="submenu">
+    <div class="container">
+        <h2 class="section-title">Bienvenido, Usuario</h2>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#perfil">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#agendar-cita">Agendar Cita</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reagendar-cita">Reagendar Cita</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cancelar-cita">Cancelar Cita</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#historial-consultas">Historial de Consultas</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sección de cada submenú -->
+        <div id="perfil" class="submenu-section">
+            <h3>Perfil</h3>
+            <p>Vista de perfil del usuario. Aquí puedes editar tus datos.</p>
+        </div>
+        
+        <div id="agendar-cita" class="submenu-section">
+            <h3>Agendar Cita</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="fecha-cita" class="form-label">Fecha de la Cita</label>
+                    <input type="date" class="form-control" id="fecha-cita">
+                </div>
+                <div class="mb-3">
+                    <label for="hora-cita" class="form-label">Hora de la Cita</label>
+                    <input type="time" class="form-control" id="hora-cita">
+                </div>
+                <button type="submit" class="btn btn-primary">Agendar Cita</button>
+            </form>
+        </div>
+
+        <div id="reagendar-cita" class="submenu-section">
+            <h3>Reagendar Cita</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="nueva-fecha" class="form-label">Nueva Fecha de la Cita</label>
+                    <input type="date" class="form-control" id="nueva-fecha">
+                </div>
+                <div class="mb-3">
+                    <label for="nueva-hora" class="form-label">Nueva Hora de la Cita</label>
+                    <input type="time" class="form-control" id="nueva-hora">
+                </div>
+                <button type="submit" class="btn btn-primary">Reagendar Cita</button>
+            </form>
+        </div>
+
+        <div id="cancelar-cita" class="submenu-section">
+            <h3>Cancelar Cita</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="cancelar-fecha" class="form-label">Selecciona la cita a cancelar</label>
+                    <input type="date" class="form-control" id="cancelar-fecha">
+                </div>
+                <button type="submit" class="btn btn-danger">Cancelar Cita</button>
+            </form>
+        </div>
+
+        <div id="historial-consultas" class="submenu-section">
+            <h3>Historial de Consultas</h3>
+            <p>Aquí se mostrarán las consultas pasadas del usuario.</p>
+        </div>
+    </div>
+</section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showCalendar(specialty) {
+            alert("Calendario para la especialidad de " + specialty);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+
+    <script>
+        
+        // Inicializa el mapa
+        function initMap() {
+            var ubicacion = { lat: 19.432608, lng: -99.133209 };  // Coordenadas de la ubicación (Ciudad de México, por ejemplo)
+            var mapa = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: ubicacion,
+            });
+    
+            // Agregar un marcador en la ubicación
+            var marker = new google.maps.Marker({
+                position: ubicacion,
+                map: mapa,
+            });
+        }
+    </script>
+    
+    
+</body>
+</html>

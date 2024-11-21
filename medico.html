@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Plus - Centro Médico Especializado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="medico.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\logotipo-hoja-combinada-cruz-medica-verde-vectorial-programas-salud-farmacia-natural-base-hierbas_460700-23.avif" alt="Medic" height="50">
+                <div class="brand-text">
+                    <h1 class="brand-name">MediCare Plus</h1>
+                    <p class="brand-slogan">Tu salud, nuestra prioridad</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#especialidades">Especialidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#agenda">Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#login" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h2 class="hero-title">Atención Médica de Excelencia</h2>
+            <p class="hero-subtitle">Especialistas comprometidos con tu bienestar</p>
+        </div>
+    </section>
+
+    <!-- Destacados (Slider) -->
+<section id="destacados" class="container py-5">
+    <h2 class="section-title text-center mb-4">Lo Más Destacado</h2>
+    <div id="promocionesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Diapositiva 1 -->
+            <div class="carousel-item active">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\famracia03.png" alt="Chequeo Completo de Salud" class="d-block w-100">
+            </div>
+            <!-- Diapositiva 2 -->
+            <div class="carousel-item">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\promos-mujer-12-1024x1024.jpg" alt="Consulta Virtual Gratuita" class="d-block w-100">
+            </div>
+        </div>
+        <!-- Controles del Carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#promocionesCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#promocionesCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</section>
+
+
+    <!-- Especialidades Section -->
+    <section id="especialidades" class="container py-5">
+        <h2 class="section-title">Nuestras Especialidades</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="specialty-card">
+                    <i class="fas fa-notes-medical"></i>
+                    <div class="specialty-content">
+                        <h3>Medicina Interna</h3>
+                        <p>Atención integral para adultos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="specialty-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <div class="specialty-content">
+                        <h3>Cardiología</h3>
+                        <p>Cuidado especializado del corazón</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="specialty-card">
+                    <i class="fas fa-female"></i>
+                    <div class="specialty-content">
+                        <h3>Ginecología</h3>
+                        <p>Salud integral de la mujer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="specialty-card">
+                    <i class="fas fa-head-side-virus"></i>
+                    <div class="specialty-content">
+                        <h3>Alergología</h3>
+                        <p>Tratamiento de alergias e inmunología</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="specialty-card">
+                    <i class="fas fa-child"></i>
+                    <div class="specialty-content">
+                        <h3>Pediatría</h3>
+                        <p>Cuidado integral infantil</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="specialty-card">
+                    <i class="fas fa-brain"></i>
+                    <div class="specialty-content">
+                        <h3>Neurología</h3>
+                        <p>Especialista en sistema nervioso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="container py-5">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="about-card">
+                    <h3>Misión</h3>
+                    <p>Proporcionar atención médica integral, personalizada y de alta calidad, enfocándonos en el bienestar holístico de nuestros pacientes.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="about-card">
+                    <h3>Visión</h3>
+                    <p>Ser el centro médico líder en atención integral, reconocido por nuestra excelencia, innovación y compromiso con la salud de la comunidad.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="about-card">
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Empatía</li>
+                        <li>Excelencia</li>
+                        <li>Respeto</li>
+                        <li>Integridad</li>
+                        <li>Compromiso</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Equipo Médico -->
+<div class="equipo-medico">
+    <h3 class="section-title">Nuestro Equipo</h3>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="medico-card">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\pngtree-young-afro-professional-doctor-png-image_10148632.png" alt="Dr. Juan Pérez" class="img-fluid rounded-circle">
+                <h4>Dr. Juan Pérez</h4>
+                <p>Medico Interno</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="medico-card">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\professor-doctor-acting-pointing-fingers-look-like-professional-medical-healthcare-in-transparent-background-png.webp" alt="Dra. María Rodríguez" class="img-fluid rounded-circle">
+                <h4>Dra. María Gómez</h4>
+                <p>Ginecóloga</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="medico-card">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\pngtree-photo-men-doctor-physician-chest-smiling-png-image_10132895.png" alt="Dr. Carlos Mendoza" class="img-fluid rounded-circle">
+                <h4>Dr. Javier Martínez</h4>
+                <p>Alergologo</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="medico-card">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\ai-generated-female-doctor-isolated-on-transparent-background-free-png.webp" alt="Dr. Ana López" class="img-fluid rounded-circle">
+                <h4>Dr. Ana López</h4>
+                <p>Cardiologa</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="medico-card">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\ai-generated-a-smiling-doctor-with-glasses-and-a-white-lab-coat-isolated-on-transparent-background-free-png.webp" alt="Dr. Luis Martínez" class="img-fluid rounded-circle">
+                <h4>Dr. Luis Martínez</h4>
+                <p>Neurologo</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="medico-card">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\ai-generated-a-female-doctor-with-a-stethoscope-isolated-on-transparent-background-free-png.webp" alt="Dr. Carolina Pérez" class="img-fluid rounded-circle">
+                <h4>Dr. Carolina Pérez</h4>
+                <p>Pediatra</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+<!-- Historial Clínico -->
+<div class="clinical-history-container">
+    <h3>Historial Clínico</h3>
+    <div class="patient-list">
+        <!-- Ejemplo de paciente -->
+        <div class="patient-item">Paciente 1</div>
+        <div class="patient-item">Paciente 2</div>
+        <div class="patient-item">Paciente 3</div>
+    </div>
+
+    <!-- Tabla de detalles clínicos -->
+    <table class="clinical-details-table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Diagnóstico</th>
+                <th>Tratamiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01/11/2024</td>
+                <td>Diagnóstico 1</td>
+                <td>Tratamiento A</td>
+            </tr>
+            <tr>
+                <td>10/11/2024</td>
+                <td>Diagnóstico 2</td>
+                <td>Tratamiento B</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="emailInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordInput" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="passwordInput" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <h4>Torre Médica</h4>
+                <p>© 2024 Todos los derechos reservados</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Email: contacto@torremedica.com</p>
+            </div>
+            <div>
+                <h4>Redes Sociales</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com" class="text-light me-3" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" class="text-light me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" class="text-light" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/main.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+/* Variables globales */
+:root {
+    --primary-color: #00796b;
+    --secondary-color: #4db6ac;
+    --accent-color: #e0f2f1;
+    --dark-color: #004d40;
+    --light-color: #f5f5f5;
+    --text-color: #333;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-text {
+    margin-left: 1rem;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.brand-slogan {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: #004d40;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+/* Ajuste de imágenes en el carrusel */
+#promocionesCarousel img {
+    width: 50%;           /* Asegura que la imagen ocupe todo el ancho disponible */
+    max-height: 600px;     /* Limita la altura máxima de las imágenes */
+    object-fit: cover;     /* Ajusta la imagen sin deformarla */
+}
+
+/* Estilo para subtítulos del carrusel */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 1rem;                 /* Espaciado interno */
+    border-radius: 10px;           /* Bordes redondeados */
+    color: white;                  /* Texto en blanco */
+}
+
+/* Ajuste general del contenedor del carrusel */
+#destacados {
+    margin-top: 3rem;       /* Espacio superior para evitar empalmes */
+    padding-bottom: 2rem;   /* Espacio inferior para separación */
+}
+
+/* Ajuste de los controles del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para destacar los controles */
+    border-radius: 50%;                   /* Iconos circulares */
+    width: 40px;
+    height: 40px;
+}
+
+/* Título de la sección "Lo Más Destacado" */
+#destacados .section-title {
+    font-size: 2rem;       /* Tamaño del texto */
+    margin-bottom: 2rem;   /* Espacio debajo del título */
+    color: #333;           /* Color del título */
+    text-align: center;    /* Centrado */
+}
+
+
+/* Especialidades */
+.specialty-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.specialty-card:hover {
+    transform: translateY(-10px);
+}
+
+.specialty-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Nosotros Section */
+.about-card {
+    background: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    text-align: center;
+    min-height: 300px;
+}
+
+.about-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.equipo-medico .medico-card {
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.equipo-medico .medico-card img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Login Modal */
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Lista de Pacientes */
+.patient-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.patient-item {
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.patient-item:hover {
+    background-color: #e8f4f8;
+    cursor: pointer;
+}
+
+.patient-item.selected {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Tabla de Detalles Clínicos */
+.clinical-details-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+}
+
+.clinical-details-table th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.clinical-details-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.clinical-details-table tr:nth-child(even) {
+    background-color: #f2f4f6;
+}
