@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Plus - Centro Médico Especializado</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\logotipo-hoja-combinada-cruz-medica-verde-vectorial-programas-salud-farmacia-natural-base-hierbas_460700-23.avif" alt="MediCare Plus Logo" width="50" height="50">
+                <div class="brand-text">
+                    <h1 class="brand-name">MediCare Plus</h1>
+                    <p class="brand-slogan">Tu salud, nuestra prioridad</p>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#especialidades">Especialidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#promociones">Promociones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Iniciar Sesión
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Atención médica de excelencia</h2>
+                <p class="hero-subtitle">Especialistas comprometidos con tu bienestar</p>
+                <a href="#especialidades" class="btn btn-primary btn-lg">Conoce nuestras especialidades</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Nosotros</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="about-card">
+                        <h3>Misión</h3>
+                        <p>Brindar atención médica de calidad, centrada en el paciente, con un equipo multidisciplinario comprometido con la excelencia y la innovación.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="about-card">
+                        <h3>Visión</h3>
+                        <p>Ser el centro médico de referencia en atención especializada, reconocido por su calidad, calidez y tecnología de vanguardia.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="about-card">
+                        <h3>Valores</h3>
+                        <ul class="list-unstyled">
+                            <li>✓ Excelencia</li>
+                            <li>✓ Compromiso</li>
+                            <li>✓ Empatía</li>
+                            <li>✓ Innovación</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Especialidades Section -->
+<section id="especialidades">
+    <div class="container">
+        <h2 class="section-title">Nuestras Especialidades</h2>
+        <div class="row g-4">
+            <!-- Especialidad 1 -->
+            <div class="col-md-4">
+                <div class="specialty-card">
+                    <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\images.jpg" alt="Medicina Interna" class="img-fluid">
+                    <div class="specialty-content">
+                        <h3>Medicina Interna</h3>
+                        <p>Atención integral para diagnóstico y tratamiento de enfermedades en adultos.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" data-medico="Medicina Interna">Agendar Cita</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 2 -->
+            <div class="col-md-4">
+                <div class="specialty-card">
+                    <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\921b8ad8fd8d52869f8f6575ceacd660.jpg" alt="Pediatría" class="img-fluid">
+                    <div class="specialty-content">
+                        <h3>Pediatría</h3>
+                        <p>Cuidados médicos especializados para niños y adolescentes.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" data-medico="Pediatría">Agendar Cita</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 3 -->
+            <div class="col-md-4">
+                <div class="specialty-card">
+                    <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\marca-clinica-cardiologia.jpg" alt="Cardiología" class="img-fluid">
+                    <div class="specialty-content">
+                        <h3>Cardiología</h3>
+                        <p>Diagnóstico y tratamiento de enfermedades del corazón.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" data-medico="Cardiología">Agendar Cita</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 4 -->
+            <div class="col-md-4">
+                <div class="specialty-card">
+                    <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\depositphotos_280225072-stock-illustration-pregnant-women-vector-icon.jpg" alt="Ginecología" class="img-fluid">
+                    <div class="specialty-content">
+                        <h3>Ginecología</h3>
+                        <p>Atención médica especializada en la salud de la mujer.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" data-medico="Ginecología">Agendar Cita</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 5 -->
+            <div class="col-md-4">
+                <div class="specialty-card">
+                    <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\allergology-color-line-icon-pictogram-600nw-2101395925.webp" alt="Alergología" class="img-fluid">
+                    <div class="specialty-content">
+                        <h3>Alergología</h3>
+                        <p>Diagnóstico y tratamiento de enfermedades alérgicas.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" data-medico="Alergología">Agendar Cita</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 6 -->
+            <div class="col-md-4">
+                <div class="specialty-card">
+                    <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\brain-logo-template-design-brainstorm-logo-ideas-neurology-logo-think-idea-concept-free-vector.jpg" alt="Neurología" class="img-fluid">
+                    <div class="specialty-content">
+                        <h3>Neurología</h3>
+                        <p>Tratamiento especializado de enfermedades del sistema nervioso.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" data-medico="Neurología">Agendar Cita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galería de Imágenes -->
+        <h3 class="section-title">Galería de Imágenes</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\medica_sur-1024x698.webp" alt="Instalaciones" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\equipo-medicos-juntos-instalaciones-hospital_762785-39151.jpg" alt="Médicos" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\standard_ANTENCIONES - DIGERD.JPG.jpeg" alt="Enfermedades Tratadas" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Modal para Agendar Cita -->
+        <div class="modal fade" id="medicoModal" tabindex="-1" aria-labelledby="medicoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="medicoModalLabel">Selecciona un Médico</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="medico-info">
+                            <p id="medico-name"></p>
+                            <p>Consultorio: <span id="medico-consultorio"></span></p>
+                            <p>Teléfono de contacto: <span id="medico-telefono"></span></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Promociones Section -->
+<section id="promociones" class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Promociones Especiales</h2>
+        <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="promo-card">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\promos-mujer-12-1024x1024.jpg" alt="Promoción 1" class="d-block w-100">
+                        <div class="promo-content">
+                            <h3>Chequeo General</h3>
+                            <p>20% de descuento en consulta general</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="promo-card">
+                        <img src="C:\Users\tazit\Downloads\proyectoFinal\imagenes\images (1).jpg" alt="Promoción 2" class="d-block w-100">
+                        <div class="promo-content">
+                            <h3>Prueba Covid-19</h3>
+                            <p>20% de descuento en todas las pruebas</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agrega más elementos del carrusel si es necesario -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contacto Section -->
+    <section id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Avenida Insurgentes Sur 1234, Colonia del Valle, Alcaldía Benito Juárez, Ciudad de México, C.P. 03100, México.</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+123 456 7890</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 map-container">
+                    <iframe src="https://www.google.com/maps/embed?..." frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para Inicio de Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Inicio de Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Selecciona tu tipo de usuario:</p>
+                    <div class="d-flex justify-content-around">
+                        <button class="btn btn-primary" onclick="redirectUser('medico')">Médico</button>
+                        <button class="btn btn-secondary" onclick="redirectUser('paciente')">Paciente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Footer -->
+<footer class="bg-dark text-light py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <p>&copy; 2024 MediCare Plus. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" class="text-light me-3" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" class="text-light me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" class="text-light" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function redirectUser(type) {
+            if (type === 'medico') {
+                window.location.href = 'medico.html';
+            } else if (type === 'paciente') {
+                window.location.href = 'paciente.html';
+            }
+        }
+    </script>
+</body>
+</html>
